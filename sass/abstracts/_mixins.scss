@@ -1,0 +1,51 @@
+@import './variables';
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-direction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin gradient-bg($background-gradient-start, $background-gradient-end) {
+    background: radial-gradient(circle at center, $background-gradient-start 100%, $background-gradient-end 100%);
+}
+
+// _mixins.scss
+
+@mixin gradient-button($background-gradient, $text-color, $hover-text-color, $hover-border-color) {
+    border: none;
+    background-color: transparent;
+    padding: 20px 42px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $text-color;
+    border: 1px solid transparent;
+    background: $background-gradient;
+    background-size: 200%;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background-position: right center;
+        color: $hover-text-color;
+        border-color: $hover-border-color;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
