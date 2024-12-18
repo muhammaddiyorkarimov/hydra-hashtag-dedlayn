@@ -311,6 +311,11 @@ header {
         @include flex-direction;
         gap: 10px;
         align-items: center;
+        width: 100%;
+        min-height: 200px;
+        border-radius: 100px;
+        background-color: #211E2E;
+        padding: 80px 20px;
 
         h1 {
             color: $white-color;
@@ -469,6 +474,7 @@ footer {
             li {
                 color: $white-color;
                 cursor: pointer;
+
                 &:hover {
                     display: inline-block;
                     background: linear-gradient(90deg, #8176AF, #C0B7E8);
